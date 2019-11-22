@@ -21,7 +21,12 @@ public class Receiver {
             String surname = message.getStringProperty("surname");
             String gender = message.getStringProperty("gender");
 
-            System.err.println("JMS message: " + id + " " + age + " " + name + " " + surname + " " + gender);
+            System.err.println("JMS message:");
+            System.out.println("ID: " + id);
+            System.out.println("age: " + age);
+            System.out.println("name: " + name);
+            System.out.println("surname: " + surname);
+            System.out.println("gender: " + gender);
         } catch (JMSException e) {
             logger.error("class: Receiver; method: testReceiver; exception:JMSException " + e);
         }
