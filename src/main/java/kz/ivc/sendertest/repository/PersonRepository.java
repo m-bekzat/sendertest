@@ -20,23 +20,23 @@ public class PersonRepository {
         person.setGender("male");
 
         Person person2 = new Person();
-        person2.setId(1);
+        person2.setId(2);
         person2.setAge(26);
         person2.setName("Zharkyn");
         person2.setSurname("Karakozhin");
         person2.setGender("male");
 
         Person person3 = new Person();
-        person3.setId(1);
+        person3.setId(3);
         person3.setAge(27);
-        person3.setName("Kundyz");
-        person3.setSurname("Sarsengalieva");
-        person3.setGender("female");
+        person3.setName("Azamat");
+        person3.setSurname("Aitken");
+        person3.setGender("male");
 
         people.add(person);
         people.add(person2);
         people.add(person3);
 
-        return people.get(id);
+        return people.get(id - 1);
     }
 }

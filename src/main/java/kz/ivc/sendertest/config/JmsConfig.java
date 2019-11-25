@@ -13,7 +13,7 @@ import org.springframework.jms.connection.CachingConnectionFactory;
 import org.springframework.jms.core.JmsTemplate;
 
 @Configuration
-public class SenderConfig {
+public class JmsConfig {
 
     @Value("${spring.activemq.broker-url}")
     private String brokerUrl;
@@ -41,11 +41,6 @@ public class SenderConfig {
     }
 
     @Bean
-    public Receiver receiver() {
-        return new Receiver();
-    }
-
-    @Bean
     public Logger logger() {
         return LoggerFactory.getLogger("loggerBean");
     }
@@ -60,5 +55,8 @@ public class SenderConfig {
         return new Sender();
     }
 
-
+    @Bean
+    public Receiver receiver() {
+        return new Receiver();
+    }
 }
